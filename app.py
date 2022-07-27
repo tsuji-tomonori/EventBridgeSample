@@ -15,5 +15,6 @@ stack = EventBridgeSampleStack(
 
 Tags.of(stack).add("Project", "EventBridgeSample")
 Tags.of(stack).add("Type", "Test")
+Tags.of(stack).add("Creator", "cdk")
 
 app.synth()
