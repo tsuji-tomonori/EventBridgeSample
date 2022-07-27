@@ -1,0 +1,34 @@
+{
+    "app": "python app.py",
+    "requireApproval": "never",
+    "fail": true,
+    "versionReporting": false,
+    "watch": {
+        "include": [
+            "**"
+        ],
+        "exclude": [
+            "README.md",
+            "cdk*.json",
+            "requirements*.txt",
+            "source.bat",
+            "**/__init__.py",
+            "python/__pycache__",
+            "tests"
+        ]
+    },
+    "context": {
+        "publisher_env": {
+            "LOG_LEVEL": "INFO",
+            "EVENT_SORCE": "custom.event.first"
+        },
+        "forward_env": {
+            "LOG_LEVEL": "INFO",
+            "EVENT_SORCE": "custom.event.second"
+        },
+        "subscriber_env": {
+            "LOG_LEVEL": "INFO"
+        },
+        "subscriber_num": 3
+    }
+}
